@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DevopsServiceApplication {
+public class DevOpsServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DevopsServiceApplication.class, args);
+		SpringApplication.run(DevOpsServiceApplication.class, args);
 	}
 }
