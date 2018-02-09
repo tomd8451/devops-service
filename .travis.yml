@@ -1,16 +1,8 @@
 language: java
 services:
 - docker
-- heroku
 jdk:
 - oraclejdk8
 after_script:
 - docker build -t devops-service:alpine .
 - docker tag devops-service:alpine registry.heroku.com/devops-service/web
-deploy:
-  provider: heroku
-  api_key:
-    secure: aR4X20BIH8GNtk5Mkd8dwImfDjuafzTfPCkrVzo1IhLy5RGpdIn1sb2gfPzSvaevY6MyabooeDZj5+PPLZJsVBeBvE0bA1P+kELe3KaZBJwVHx0BjWTLgaoRWni3VastBal1z8jOpV45LXvCux9IN7O0YzAtJ7+ZSJYKb/rT2hZ1bTZxpZmuZj0M4VGGcLUUBF9LONoc0b68wCXxJ8ysizZKKK6JMyKDEDFuSlvig3TzFsFcp5Fesy5zsx+eSlJ57+srhCkZwzr6EvUI+XSlv1I5SzrGQNsBCwR2gHrHrmaPSz75mAPl6riolFg/4yqeS00uKO6IXtGENSWbFxRnhYTMuI2Auim7knTZeI7kAskyhEy+QqGUBxa7VSQNyixyaCK9m1zoEo+ghTI3XreoswEYvmxPTr0GslPSAuDvg2zgdtf+Izr5g1g8q2l3FvvD3S1K2c3WyAQqYf7yVL39mQ6cp69w8rNgsvZo3Y+D4r5bv/C186RvYmHmlfwpJ95zYyJmFF2cPR4URPvrqWgmWX2LlfNKwuyFzVvChN0vexaPDD9Csirkpd4eMz7B38SlRiburnIWBbNJsMxVi2B2L1NmLIgTW7a+XhNdN/lU7NkhwlBG/snjjeh2DtaAMweI2fqdFb9mb9HVoJweFia5O5uG+iNPEg9bYNTDz3rYrmg=
-    run:
-      - "container:login"
-      - "container:push"
