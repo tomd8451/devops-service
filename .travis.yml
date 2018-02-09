@@ -4,3 +4,5 @@ services:
   - heroku
 jdk:
   - oraclejdk8
+before_script:
+  - docker build -t devops-service:alpine .
