@@ -6,6 +6,5 @@ jdk:
 after_script:
   - docker build -t devops-service:alpine .
   - docker tag devops-service:alpine registry.heroku.com/devops-service/web
-after_success:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD" registry.heroku.com
   - docker push registry.heroku.com/devops-service/web
